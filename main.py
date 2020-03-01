@@ -44,9 +44,9 @@ class Python_Bot():
 
         # Fill in Facebook login information
         email_text = self.driver.find_element_by_xpath('//*[@id="email"]')
-        email_text.send_keys('naveenan.r.y@gmail.com')        
+        email_text.send_keys(username)        
         password_text = self.driver.find_element_by_xpath('//*[@id="pass"]')
-        password_text.send_keys('ramanan36')
+        password_text.send_keys(password)
 
         # Login to Facebook
         login_btn = self.driver.find_element_by_xpath('//*[@id="u_0_0"]')
@@ -58,7 +58,6 @@ class Python_Bot():
         location_btn.click()
         notification_btn = self.driver.find_element_by_xpath('/html/body/div[2]/div/div/div/div/div[3]/button[2]')
         notification_btn.click()
-        """
 
         names = ['face-width', 'left-eyebrow', 'right-eyebrow', 'nose-length', 'nose-tip', 'lefteye-width', 'lefteye-length', 'righteye-width', 'righteye-length', 'toplip-length', 'mouth', 'right-swipe']
         df = pd.read_csv("outFile.csv", names=names)
@@ -124,7 +123,7 @@ class Python_Bot():
             count += 1
 
         self.driver.quit()
-        """
+        
 
     def swipe_left(self,count,im):
         ActionChains(self.driver).send_keys(Keys.LEFT).perform()
