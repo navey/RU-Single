@@ -1,0 +1,1 @@
+Hold photos for left-swiped people
